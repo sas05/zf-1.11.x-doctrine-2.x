@@ -1,0 +1,23 @@
+<?php
+/**
+ * @category
+ * @package
+ * @copyright
+ * @author      Saeed Ahmed <saeed.sas@gmail.com>
+ * @date        7/5/11 2:50 PM
+ */
+?>
+<form action="<?php echo $this->escape($this->element->getAction()); ?>"
+      method="<?php echo $this->escape($this->element->getMethod()); ?>">
+    <?php echo $this->flashMessenger(); ?>
+    <table border="0" align="center">
+        <tr>
+            <td>Name:</td>
+            <td><?php echo $this->element->name; ?></td>
+        </tr>
+
+        <tr>
+            <td><?php echo $this->element->save; ?></td>
+            <td><?php echo $this->element->reset; ?></td>
+        </tr>
+    </table>

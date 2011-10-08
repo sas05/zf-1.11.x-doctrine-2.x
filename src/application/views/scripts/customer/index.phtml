@@ -1,0 +1,24 @@
+<?php
+/**
+ * @category
+ * @package
+ * @copyright
+ * @author      Saeed Ahmed <saeed.sas@gmail.com>
+ * @date        7/5/11 2:50 PM
+ */
+        ?>
+
+<table border="0" align="center">
+    <tr>
+        <th>Serial</th>
+        <th>Name</th>
+    </tr>
+<?php foreach ($this->records as $key => $customer) : ?>
+    <tr id="row_<?php echo $customer['id'];?>">
+    <?php $serial = $key + (($this->page - 1) * $this->itemNumber) ?>
+    <tr>
+        <td><?php echo ++$serial; ?></td>
+        <td><?php echo $customer['name']; ?></td>
+    </tr>
+<?php endforeach; ?>
+</table>

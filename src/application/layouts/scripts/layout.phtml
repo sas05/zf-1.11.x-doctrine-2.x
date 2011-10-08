@@ -1,0 +1,29 @@
+<?php echo $this->doctype() ?>
+<html>
+<head>
+	<?php echo $this->headTitle(); ?>
+    <?php echo $this->headMeta(); ?>
+    <?php echo $this->headLink(); ?>
+    <?php echo $this->headScript(); ?>
+</head>
+<body>
+    <div id = "header">
+        <h2>Your Site Admin</h2>
+    </div>
+
+    <div id="sidebar">
+        <ul>
+            <li><a href="/customer/index/"> Customers</a></li>
+            <li><a href="/customer/create/"> Create Customers</a></li>
+            <li><a href="/product/index">Products</a></li>
+            <li><a href="/product/create">Create products</a></li>
+        </ul>
+    </div>
+
+    <?php echo $this->layout()->content; ?>
+
+    <div id="footer">
+        &copy;Copy Right
+    </div>
+</body>
+</html>

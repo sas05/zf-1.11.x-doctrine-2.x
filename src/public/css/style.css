@@ -1,0 +1,46 @@
+body{
+    font-size: 14px;
+	font-family: Arial, Helvetica, Sans-serif;
+    width: 700px;
+}
+#header{
+    height: 70px;
+    font-size: 26px;
+    text-align: center;
+    border: 2px solid #000000;
+}
+
+#sidebar{
+    width: 200px;
+    height: auto;
+    float: left;
+}
+
+#sidebar ul{
+    padding: 20px;
+}
+
+#sidebar li{
+    padding-bottom: 10px;
+}
+
+#content{
+    text-align: center;
+	padding: 0px 0px 30px;
+	font-size: 14px;
+    border: 2px solid #000000;  
+}
+
+#content.login{
+}
+
+#content .input{
+	padding: 5px 0 10px;
+}
+
+#footer{
+    clear: both;
+    text-align: center;
+    border: 2px solid #000000;
+    height: 40px;
+}

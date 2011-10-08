@@ -1,0 +1,5 @@
+---
+name: Doctrine Migrations
+migrations_namespace: Migration
+table_name: migration_version
+migrations_directory: <?php echo APPLICATION_PATH ?>/models/Migration
