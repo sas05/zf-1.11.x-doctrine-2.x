@@ -27,7 +27,7 @@ class CustomerController extends Zend_Controller_Action
 
     public function init()
     {
-        $this->_itemNumber = 3;
+        $this->_itemNumber = 10;
         $this->_entityManager   = \Zend_Registry::get('DoctrineEntityManager');
         $this->_customerRepo    = $this->_entityManager->getRepository('Entity\Customer');
         $this->_flashMessenger  = $this->_helper->FlashMessenger;
@@ -51,7 +51,6 @@ class CustomerController extends Zend_Controller_Action
     public function createAction()
     {
         $this->view->createForm = $this->_form;
-        $this->_customerEntity      = new \Entity\Customer;
 
         if ($this->getRequest()->isPost()) {
 
