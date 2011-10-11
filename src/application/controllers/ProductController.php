@@ -44,20 +44,14 @@ class ProductController extends Zend_Controller_Action
         $productForm = new Application_Form_Product();
         $this->view->create = $productForm;
         $productModel = new Application_Model_Dao_Product();
-        $entity = new Entity\Product;
 
         if ($this->getRequest()->isPost()) {
             if ($productForm->isValid($_POST)) {
-                $entity->setName($this->getRequest()->getParam('name'));
-                $entity->setDescription($this->getRequest()->getParam('description'));
-                $entity->setPrice($this->getRequest()->getParam('price'));
-                $entity->setCustomer($this->_entityManager->getRepository('Entity\Customer')->find($this->getRequest()->getParam('customer')));
-
-                $this->_entityManager->persist($entity);
-                $this->_entityManager->flush();
-                $this->_flashMessenger->addMessage(
-                    array('flash-success' => 'Create Successfully!')
-                );
+                if($productModel->save($this->getRequest()->getParams())){
+                    $this->_flashMessenger->addMessage(
+                        array('flash-success' => 'Create Successfully!')
+                    );
+                }
             }
         }
     }
